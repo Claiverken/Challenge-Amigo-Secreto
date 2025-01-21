@@ -24,3 +24,6 @@ Este projeto foi desenvolvido utilizando:
   3. Após adicionar todos os nomes, clique em "Sortear" para descobrir o amigo secreto.
   4. A lista será automaticamente limpa após o sorteio.
   5. Para reiniciar, basta adicionar novos nomes.
+
+Acesse o site nesse link [aqui](https://claiverken.github.io/Challenge-Amigo-Secreto/)
+![Image](https://github.com/user-attachments/assets/491762f4-9f12-4d45-9af3-f21ae03f53f7)
