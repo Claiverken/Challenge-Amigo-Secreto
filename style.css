@@ -125,6 +125,20 @@ button {
     background-color: #a1a1a1;
 }
 
+.botao-remover {
+    font-size: 10px; 
+    padding: 3px 8px; 
+    background-color: #fe652b; 
+    color: white; 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer; 
+  }
+  
+  .botao-remover:hover {
+    background-color: #e55720; 
+  }
+
 /* Listas */
 ul {
     list-style-type: none;
