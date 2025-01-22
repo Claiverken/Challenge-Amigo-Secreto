@@ -160,3 +160,18 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-title {
+      font-size: 24px;
+  }
+  
+  .header-banner img {
+      max-width: 50%;
+  }
+  
+  .section-title, .input-name, .button-add, .button-draw {
+      font-size: 16px;
+  }
+}
