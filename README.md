@@ -5,11 +5,12 @@ Bem-vindo ao projeto Amigo Secreto, uma aplicação web simples para adicionar n
 
   - 📥 Adicionar amigos à lista.<br>
   - 📃 Visualizar a lista de amigos adicionados.<br>
+  - 🗑 Remover nome da lista.<br>
   - 🎲 Sortear um amigo secreto de maneira aleatória.<br>
   - 🧹 Limpar lista automaticamente após o sorteio.<br>
   - 🆕 Adicionar novos nomes, apagando o resultado anterior.<br>
 
-  🚀 Tecnologias Utilizadas
+🚀 Tecnologias Utilizadas
 
 Este projeto foi desenvolvido utilizando:
 
