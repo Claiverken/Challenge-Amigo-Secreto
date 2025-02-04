@@ -41,16 +41,31 @@ function atualizarLista() {
   for (let i = 0; i < amigos.length; i++) {
     let amigo = amigos[i];
 
+    // Cria o elemento <li>
     let item = document.createElement("li");
 
+    // Cria a <div> que vai conter o nome e o botão
+    let div = document.createElement("div");
+
+    // Adiciona o nome do amigo dentro de um <span>
+    let span = document.createElement("span");
+    span.textContent = amigo;
+
+    // Cria o botão "Remover"
     let botaoRemover = document.createElement("button");
     botaoRemover.textContent = "Remover";
     botaoRemover.classList.add("botao-remover");
     botaoRemover.onclick = () => removerAmigo(i);
 
-    item.textContent = amigo;
-    item.appendChild(botaoRemover);
+    // Adiciona o nome e o botão à <div>
+    div.appendChild(span);
+    div.appendChild(botaoRemover);
+    div.classList.add("lista-de-amigo-estilo");
 
+    // Adiciona a <div> ao <li>
+    item.appendChild(div);
+
+    // Adiciona o <li> à lista
     lista.appendChild(item);
   }
 }
@@ -83,4 +98,11 @@ function sortearAmigo() {
 function limparLista() {
   amigos = [];
   atualizarLista();
+}
+
+function limparDados(){
+  amigos = [];
+  atualizarLista();
+  let resultado = document.querySelector("#resultado");
+    resultado.textContent = "";
 }

@@ -1,11 +1,11 @@
 :root {
-  --color-primary: #4b69fd;
-  --color-secondary: #fff9eb;
+  --color-primary: #35155d;
+  --color-secondary: #512b81;
   --color-tertiary: #c4c4c4;
-  --color-button: #fe652b;
-  --color-button-hover: #e55720;
-  --color-text: #444444;
-  --color-white: #ffffff;
+  --color-quaternary: #1eccbf;
+  --color-button: #8cabff;
+  --color-button-hover: #4477ce;
+  --color-text: #000000;
 }
 
 /* Estilos gerais */
@@ -16,11 +16,19 @@
 }
 
 body {
-  height: 100vh;
-  background-color: var(--color-primary);
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #8b5fc1,
+    #8150bd,
+    #7844b8,
+    #512b81,
+    #35155d
+  );
   display: flex;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
 }
 
 .main-content {
@@ -28,28 +36,20 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  align-items: center;
+  height: 100vh;
 }
 
 /* Banner */
 .header-banner {
-  flex: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0 0;
-}
-
-/* Seção de entrada */
-.input-section {
-  flex: 60%;
-  background-color: var(--color-secondary);
-  border: 1px solid #000;
-  border-radius: 64px 64px 0 0;
+  flex: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  width: 100%;
+  padding: 0;
+  width: 50%;
+  height: 50%;
 }
 
 /* Títulos */
@@ -58,16 +58,51 @@ body {
   font-family: "Merriweather", serif;
   font-weight: 900;
   font-style: italic;
-  color: var(--color-white);
+  color: var(--color-quaternary);
+}
+
+.img-principal {
+  max-width: 100%;
+  max-height: 100%;
+  height: 450px;
+  width: 277px;
+}
+
+/* Seção de entrada */
+.input-section {
+  flex: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    #8150bd,
+    #7844b8,
+    #512b81,
+    #35155d
+  );
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
 }
 
 .section-title {
   font-family: "Inter", serif;
   font-size: 36px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-quaternary);
   margin: 10px 0;
   text-align: center;
+}
+
+.input-name {
+  background-color: var(--color-button);
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--color-primary);
+  border-radius: 15px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px var(--color-primary);
 }
 
 /* Contêineres de entrada e botão */
@@ -77,22 +112,55 @@ body {
   width: 100%;
   max-width: 600px;
   margin-top: 20px;
+  gap: 5px;
 }
 
-.input-name {
-  width: 100%;
+.button-add {
+  background-color: var(--color-button);
+  color: var(--color-primary);
+  border-radius: 15px;
+  border: 2px solid var(--color-primary);
+  font-family: "Inter", sans-serif;
   padding: 10px;
-  border: 2px solid #000;
-  border-radius: 25px 0 0 25px;
-  font-size: 16px;
+  box-shadow: 0 4px 8px var(--color-primary);
 }
 
+.button-add:hover {
+  background-color: var(--color-button-hover);
+}
+
+/*Contêineres de botão de sorteio e reset*/
 .button-container {
   display: flex;
   max-width: 600px;
   width: 100%;
   justify-content: center;
   gap: 3%;
+}
+
+/* Botão de sortear nome */
+.button-draw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--color-primary);
+  background-color: var(--color-button);
+  border: 2px solid var(--color-primary);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px var(--color-primary);
+  cursor: pointer;
+}
+
+.button-draw img {
+  margin-right: 18.56%;
+}
+
+.button-draw:hover {
+  background-color: var(--color-button-hover);
 }
 
 .button-reset {
@@ -131,91 +199,194 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos de botão */
-button {
-  padding: 15px 30px;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  border: 2px solid #000;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-.button-add {
-  background-color: var(--color-tertiary);
-  color: var(--color-text);
-  border-radius: 0 25px 25px 0;
-}
-
-.button-add:hover {
-  background-color: #a1a1a1;
-}
-
 .botao-remover {
-  font-size: 10px;
-  padding: 3px 8px;
-  background-color: #fe652b;
-  color: white;
+  font-size: 17px;
+  padding: 0;
+  outline: none;
+  background: none;
+  background-color: var(--color-primary);
+  color: var(--color-quaternary);
   border: none;
-  border-radius: 25px;
   cursor: pointer;
-}
-
-.botao-remover:hover {
-  background-color: #e55720;
+  outline: none;
 }
 
 /* Listas */
 ul {
   list-style-type: none;
-  color: var(--color-text);
+  color: var(--color-quaternary);
   font-family: "Inter", sans-serif;
   font-size: 18px;
   margin: 20px 0;
 }
 
+.name-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  gap: 5px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  color: var(--color-quaternary);
+  padding: 5px;
+  background-color: var(--color-primary);
+  border-radius: 6px;
+}
+
+.lista-de-amigo-estilo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 4px 8px var(--color-primary);
+}
+
 .result-list {
   margin-top: 15px;
-  color: #05df05;
+  color: #cc00ff;
   font-size: 22px;
   font-weight: bold;
   text-align: center;
 }
 
-/* Botão de sortear título */
-.button-draw {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 10px 40px;
-  color: var(--color-white);
-  background-color: var(--color-button);
-  font-size: 16px;
-}
+/* Responsividade*/
+/* Estilos para smartphones (até 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
 
-.button-draw img {
-  margin-right: 40px;
-}
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
 
-.button-draw:hover {
-  background-color: var(--color-button-hover);
-}
+  .header-banner {
+    width: 100%;
+  }
 
-/* Responsividade */
-@media (max-width: 768px) {
+  .img-principal {
+    max-width: 100%;
+    max-height: 100%;
+    height: 300px;
+    width: 180px;
+  }
+
+  .input-section {
+    width: 100%;
+    padding: 15px;
+  }
+
   .main-title {
+    font-size: 36px;
+  }
+
+  .section-title {
     font-size: 24px;
   }
 
-  .header-banner img {
-    max-width: 50%;
+  .input-wrapper {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .section-title,
-  .input-name,
-  .button-add,
+  .input-name {
+    width: 100%;
+  }
+
+  .button-container {
+    width: 100%;
+  }
+
   .button-draw {
-    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .name-list {
+    width: 100%;
+  }
+
+  .lista-de-amigo-estilo {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .button-add {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Estilos para tablets (601px a 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main-content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .header-banner {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .img-principal {
+    max-width: 100%;
+    max-height: 100%;
+    height: 400px;
+    width: 278px;
+  }
+
+  .input-section {
+    width: 80%;
+  }
+
+  .main-title {
+    font-size: 42px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .input-wrapper {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .input-name {
+    width: 100%;
+  }
+
+  .button-container {
+    width: 100%;
+  }
+
+  .button-draw {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .name-list {
+    width: 100%;
+  }
+
+  .lista-de-amigo-estilo {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .button-add {
+    width: auto;
+    margin-top: 0;
   }
 }
