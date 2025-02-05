@@ -28,4 +28,5 @@ Este projeto foi desenvolvido utilizando:
   5. Para reiniciar, basta adicionar novos nomes ou clickar em "Limpar".
 
 Acesse o site nesse link [aqui](https://claiverken.github.io/Challenge-Amigo-Secreto/)
-![Image](https://github.com/user-attachments/assets/491762f4-9f12-4d45-9af3-f21ae03f53f7)
+
+https://github.com/user-attachments/assets/dd5e6406-07dc-41e9-8dac-7c347d6d0bce
