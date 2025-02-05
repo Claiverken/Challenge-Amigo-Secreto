@@ -8,6 +8,7 @@ Bem-vindo ao projeto Amigo Secreto, uma aplicação web simples para adicionar n
   - 🗑 Remover nome da lista.<br>
   - 🎲 Sortear um amigo secreto de maneira aleatória.<br>
   - 🧹 Limpar lista automaticamente após o sorteio.<br>
+  - 🔃 Botão para Limpar todos os dados.<br>
   - 🆕 Adicionar novos nomes, apagando o resultado anterior.<br>
 
 🚀 Tecnologias Utilizadas
@@ -24,7 +25,7 @@ Este projeto foi desenvolvido utilizando:
   2. Clique em "Adicionar" para inserir na lista.
   3. Após adicionar todos os nomes, clique em "Sortear" para descobrir o amigo secreto.
   4. A lista será automaticamente limpa após o sorteio.
-  5. Para reiniciar, basta adicionar novos nomes.
+  5. Para reiniciar, basta adicionar novos nomes ou clickar em "Limpar".
 
 Acesse o site nesse link [aqui](https://claiverken.github.io/Challenge-Amigo-Secreto/)
 ![Image](https://github.com/user-attachments/assets/491762f4-9f12-4d45-9af3-f21ae03f53f7)
